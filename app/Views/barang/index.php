@@ -30,9 +30,9 @@
                     <td><?= esc($barang['uom']) ?></td>
                     <td><?= esc($barang['stok']) ?></td>
                     <td>
-                        <a href="/barang/edit/<?= $barang['id'] ?>">Edit</a>
-                        <a href="/barang/delete/<?= $barang['id'] ?>"
-                            onclick="return confirm('Are you sure?')">Delete</a>
+                        <a href="/barang/edit/<?= $barang['id'] ?>" class="btn btn-warning btn-sm">Edit</a>
+                        <a href="/barang/delete/<?= $barang['id'] ?>" onclick="return confirm('yakin ingin menghapus?')"
+                            class="btn btn-danger btn-sm">Delete</a>
                     </td>
                 </tr>
                 <?php endforeach; ?>

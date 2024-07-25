@@ -33,4 +33,26 @@ class BarangController extends Controller
         $model->save($data);
         return redirect()->to('/barang');
     }
+
+    public function edit($id = null)
+    {
+        $model = new BarangModel();
+        $data['barang'] = $model->find($id);
+        return view('barang/edit', $data);
+    }
+
+    public function update()
+    {
+        $model = new BarangModel();
+        $id = $this->request->getPost('id');
+        $data = [
+            'barcode' => $this->request->getPost('barcode'),
+            'nama' => $this->request->getPost('nama'),
+            'departmen' => $this->request->getPost('departmen'),
+            'uom' => $this->request->getPost('uom'),
+            'stok' => $this->request->getPost('stok'),
+        ];
+        $model->update($id, $data);
+        return redirect()->to('/barang');
+    }
 }
