@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <h1 class="my-4">Data Barang</h1>
-        <a href="#" class="btn btn-primary mb-3">Tambah Barang</a>
+        <a href="/barang/create" class="btn btn-primary mb-3">Tambah Barang</a>
         <table class="table table-bordered">
             <thead>
                 <tr>
