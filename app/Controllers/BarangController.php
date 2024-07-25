@@ -55,4 +55,11 @@ class BarangController extends Controller
         $model->update($id, $data);
         return redirect()->to('/barang');
     }
+
+    public function delete($id = null)
+    {
+        $model = new BarangModel();
+        $model->delete($id);
+        return redirect()->to('/barang');
+    }
 }
